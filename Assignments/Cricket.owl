@@ -1,0 +1,383 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#"
+     xml:base="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Comprises -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Comprises">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Match"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Tournament"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Hits -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Hits">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Ball"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Batsman"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Played_in -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Played_in">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Ground"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Match"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Plays_with -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Plays_with">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Bat"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Batsman"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Scores -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Scores">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Batsman"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Run"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Supervise -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Supervise">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Empires"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Match"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Watches -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Watches">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Audience"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Match"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#bowls -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#bowls">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Ball"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Bowlers"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Audience -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Audience">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Ball -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Ball">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Cricket"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Bat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Bat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Cricket"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Batsman -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Batsman">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Players"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Bowlers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Bowlers">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Players"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Cricket -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Cricket"/>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Empire -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Empire">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Cricket"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Empires -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Empires">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Ground -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Ground">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Cricket"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Match -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Match">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Cricket"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Person">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Cricket"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Players -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Players">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Run -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Run">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Cricket"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Tournament -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Tournament">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Cricket"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Aleem_Dar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Aleem_Dar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Empires"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Asad_Rauf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Asad_Rauf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Empires"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Brette_Lee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Brette_Lee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Bowlers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Brian_Lara -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Brian_Lara">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Batsman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Elton_Chigumbura -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Elton_Chigumbura">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Batsman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Greame_smith -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Greame_smith">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Batsman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Imran_Khan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Imran_Khan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Batsman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Kumar_Sangakkara -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Kumar_Sangakkara">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Batsman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Mahendra_Singh_Dhoni -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Mahendra_Singh_Dhoni">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Batsman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Martin_Guptill -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Martin_Guptill">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Batsman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Muttiah_Muralitharan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Muttiah_Muralitharan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Bowlers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Ricky_Ponting -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Ricky_Ponting">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Batsman"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Shane_Warna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Shane_Warna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Bowlers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Shoaib_Akhter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Shoaib_Akhter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Bowlers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Shozab_Raza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Shozab_Raza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Empires"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Simon_Taufel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Simon_Taufel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Empires"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Waqar_Younus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Waqar_Younus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Bowlers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Wasim_Akram -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Wasim_Akram">
+        <rdf:type rdf:resource="http://www.semanticweb.org/m.shaheryar/ontologies/2018/3/untitled-ontology-5#Bowlers"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
