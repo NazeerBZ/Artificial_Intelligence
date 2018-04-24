@@ -1,2 +1,1 @@
-# Artificial_Intelligence
-Assignment folder includes Theory + Lab assignments
+# Artificial_Intelligence (Lab + Theory)
