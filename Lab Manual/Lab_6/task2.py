@@ -44,11 +44,12 @@ def baseline_model():
     return model
 
 model = baseline_model()
-model.fit(x_train, y_train, validation_split=0.22, epochs=10, batch_size=200)
-scores = model.evaluate(x_test, y_test)
-print("acc: %.2f%%" % (scores[1]*100))
+model.fit(x_train, y_train, validation_split=0.22, epochs=5, batch_size=200)
 
+loss, accuracy = model.evaluate(x_test, y_test)
+print("\nLoss: %.2f, Accuracy: %.2f%% \n" % (loss, accuracy*100))
 
-
-
+y_test_predicted = model.predict_classes(x_test)
+for i in range(len(x_test)):
+	print("Sample=%s, Predicted=%s" % (i, y_test_predicted[i]))
 

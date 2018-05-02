@@ -18,8 +18,8 @@ dataset = scaler.fit_transform(dataset)
 
 # split into train and test sets
 trainSize = int(len(dataset) * 0.67) # 67% of rows: all columns => 96 rows
-trainSet = dataset[0:trainSize, :]
-testSet = dataset[trainSize:, :]
+trainset = dataset[0:trainSize, :]
+testset = dataset[trainSize:, :]
 
 #simple function to convert our single column of data into a two-column 
 #dataset: the first column containing this month’s (t) passenger count and 
@@ -33,8 +33,8 @@ def create_dataset(dataset):
        dataY.append(dataset[i + look_back, 0])
     return np.array(dataX), np.array(dataY)
 
-x_train, y_train = create_dataset(trainSet)
-x_test, y_test = create_dataset(testSet)
+x_train, y_train = create_dataset(trainset)
+x_test, y_test = create_dataset(testset)
 
 # reshape input to be [samples, time steps, features]
 x_train = x_train.reshape(x_train.shape[0], 1, x_train.shape[1])
@@ -48,24 +48,26 @@ def LSTM_model():
     return model
 
 model = LSTM_model()    
-model.fit(x_train, y_train ,epochs=100, batch_size=1)
+model.fit(x_train, y_train, epochs=100, batch_size=1)
 
 # make predictions
-testPredict = model.predict(x_test)
+y_test_predicted = model.predict(x_test)
+for i in range(len(x_test)):
+    print('X=%s, Predicted=%s' % (x_test[i], y_test_predicted[i]))
 # invert predictions
-testPredict = scaler.inverse_transform(testPredict)
+y_test_predicted = scaler.inverse_transform(y_test_predicted)
 y_test = scaler.inverse_transform([y_test])
 # calculate root mean squared error
-testScore = math.sqrt(mean_squared_error(y_test[0], testPredict[:,0]))
+testScore = math.sqrt(mean_squared_error(y_test[0], y_test_predicted[:,0]))
 print('Test Score: %.2f RMSE' % (testScore))
 
 
 
 
-
-
-
-
+#
+#
+#
+#
 
 
 

@@ -15,7 +15,7 @@ X = dataset[:, 0:8]
 Y = dataset[:, 8]
 #
 ##Normalizing (rescale data to the range of 0 to 1)
-scaler = MinMaxScaler(feature_range=(0, 1))
+scaler = MinMaxScaler(feature_range=(0, 1)) # only works on array with 2 dimention
 X = scaler.fit_transform(X)
 
 x_train, x_test, y_train, y_test = train_test_split(X,Y, test_size=0.33, random_state=seed)
@@ -30,9 +30,14 @@ model.add(Dense(units=1, activation='sigmoid')) #output layer
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 # Fit the model
 model.fit(x_train, y_train, batch_size=10, epochs=150)
+
 # evaluate the model
-scores = model.evaluate(x_test, y_test)
-print("\n%s: %.2f%%" % (model.metrics_names[1], scores[1]*100))
-# calculate predictions
-predictions = model.predict(x_test)
-y_pred = [round(x[0]) for x in predictions]
+loss, accuracy = model.evaluate(x_test, y_test)
+print("\nLoss: %.2f, Accuracy: %.2f%% \n" % (loss, accuracy*100))
+
+# make predictions
+y_test_predicted = model.predict_classes(x_test)
+for i in range(len(x_test)):
+    print('Sample=%s, Predicted=%s' % (i,y_test_predicted[i]))
+    
+  
