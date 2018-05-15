@@ -1,5 +1,5 @@
 import numpy as np
-from keras.datasets import mnist
+from keras.datasets import cifar10
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Flatten, Conv2D, MaxPooling2D
 from keras.utils import np_utils
@@ -10,7 +10,7 @@ K.set_image_dim_ordering('th')
 # fix random seed for reproducibility
 np.random.seed(7)
 
-(x_train, y_train), (x_test,y_test) = mnist.load_data()
+(x_train, y_train), (x_test,y_test) = cifar10.load_data()
 #plt.imshow(x_train[5])
 #print(y_train[5])
 # just to make large dataset to small
@@ -19,8 +19,8 @@ y_train = y_train[:10000]
 x_test = x_test[:2000]
 y_test = y_test[:2000]
 
-x_train = x_train.reshape(x_train.shape[0],1,28,28).astype('float32')
-x_test = x_test.reshape(x_test.shape[0],1,28,28).astype('float32')
+x_train = x_train.reshape(x_train.shape[0],3,32,32).astype('float32')
+x_test = x_test.reshape(x_test.shape[0],3,32,32).astype('float32')
 # normalize inputs from 0-255 to 0-1
 x_train = x_train / 255
 x_test = x_test / 255
@@ -31,7 +31,7 @@ num_classes = y_test.shape[1]
 
 def baseline_model():
     model = Sequential()
-    model.add(Conv2D(30, (5,5), input_shape=(1,28,28), activation='relu'))
+    model.add(Conv2D(30, (5,5), input_shape=(3,32,32), activation='relu'))
     model.add(MaxPooling2D(pool_size=(2,2))) # picks max value in 2x2 region of feature map
     model.add(Conv2D(15, (3, 3), activation='relu'))
     model.add(MaxPooling2D(pool_size=(2, 2)))
@@ -49,7 +49,7 @@ model.fit(x_train, y_train, validation_split=0.22, epochs=5, batch_size=200)
 loss, accuracy = model.evaluate(x_test, y_test)
 print("\nLoss: %.2f, Accuracy: %.2f%% \n" % (loss, accuracy*100))
 
-y_test_predicted = model.predict_classes(x_test)
-for i in range(len(x_test)):
-	print("Sample=%s, Predicted=%s" % (i, y_test_predicted[i]))
+#y_test_predicted = model.predict_classes(x_test)
+#for i in range(len(x_test)):
+#	print("Sample=%s, Predicted=%s" % (i, y_test_predicted[i]))
 

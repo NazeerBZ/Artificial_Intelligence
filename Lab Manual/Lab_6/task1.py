@@ -39,5 +39,3 @@ print("\nLoss: %.2f, Accuracy: %.2f%% \n" % (loss, accuracy*100))
 y_test_predicted = model.predict_classes(x_test)
 for i in range(len(x_test)):
     print('Sample=%s, Predicted=%s' % (i,y_test_predicted[i]))
-    
-  
