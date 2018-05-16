@@ -1,1 +1,1 @@
-# Artificial_Intelligence (Lab + Theory)
+# Artificial_Intelligence
